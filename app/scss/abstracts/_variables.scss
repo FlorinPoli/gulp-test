@@ -1,0 +1,19 @@
+
+$primary:#ffcc00;
+$secondary: #4b4b4b;
+$muted: rgba(255, 255, 255, 0.5);
+
+
+$colors:(
+    "primary":$primary,
+    "secondary": $secondary,
+    "dark": black,
+    "white": white,
+    "muted": $muted,
+);
+
+$base-border-radius: rem(50);
+$base-padding: 1px;
+$base-border-thickness: rem(1);
+
+$padding-x-custom: 19.35vw;

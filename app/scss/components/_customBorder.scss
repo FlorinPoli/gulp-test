@@ -1,0 +1,22 @@
+@mixin custom-border($width: 100%, $color: black){
+  background-color: $color;
+  height: rem(2);
+  width: $width;
+  margin: {
+    top: rem(30);
+    bottom: rem(30);
+  }
+}
+
+
+.border-w90 {
+   @include custom-border(rem(90));
+  }
+
+.border-white{
+  @include custom-border(rem(90),white);
+  margin: {
+    top:rem(30);
+    bottom: rem(20);
+  }
+}

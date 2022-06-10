@@ -1,0 +1,15 @@
+@mixin arrow(){
+
+
+  
+}
+
+
+.arrow {
+    border: solid white;
+    border-width: 0 rem(2) rem(2) 0;
+    display: inline-block;
+    padding: rem(2);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }

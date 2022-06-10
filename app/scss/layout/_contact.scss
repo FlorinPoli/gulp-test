@@ -1,0 +1,23 @@
+
+
+.contact {
+    min-height: rem(200);
+    background-color: #a39064;
+  
+    p{
+      font-size: rem(40);
+      margin: {
+        
+        bottom: rem(60);
+        top: rem(60);
+      }
+    }
+    .btn {
+      border: 1px solid white;
+      color: white;
+      min-width: rem(190);
+      font-size: rem(13);
+      font-weight: 600;
+    }
+  
+  }

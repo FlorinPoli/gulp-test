@@ -1,0 +1,16 @@
+@mixin header($bgu-color: grey, $link-color: black){
+    background-color:  $bgu-color;
+    a{
+        color: $link-color;
+    }
+    svg{
+      fill: $link-color;
+    }
+}
+.header{
+  @include header;
+}
+
+.header-case{
+  @include header( #f4f4f4,black )
+}

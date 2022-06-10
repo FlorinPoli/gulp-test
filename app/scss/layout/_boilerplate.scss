@@ -1,0 +1,57 @@
+html {
+  overflow-x: none;
+  font-size: 100%;
+}
+header{
+  height: rem(380);
+  margin-bottom: rem(90);
+  a{
+    text-decoration: none;
+  }
+  .bottomOne {
+
+    &__logo {
+      width: rem(200);
+    }
+    &__span {
+      margin-top: rem(115);
+      font-size: 40px;
+    }
+  }
+  .topOne {
+    &__call {
+      margin-right: rem(10);
+    }
+    &__icon {
+      padding: {
+        top: rem(10);
+        right: rem(38);
+      }
+    }
+    &__last {
+      padding-top: rem(10);
+    }
+    .vr {
+      margin: {
+        left: rem(30);
+        right: rem(30);
+      }
+    }
+  }
+  
+
+
+  }
+  body{
+    .title{
+      @include principal-title();
+    }
+    .secondary-title{
+      @include secondary-title();
+    }
+  }
+
+  section, footer{
+    padding-right: $padding-x-custom;
+    padding-left: $padding-x-custom;
+  }

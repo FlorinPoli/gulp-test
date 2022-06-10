@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+@function rem($pixel) {
+    @if math.is-unitless($pixel) {
+        //divide $pixel by 16 to rems if dont have units
+        @return math.div($pixel, 16)+rem;
+    }
+    @else {
+        @error "Rem function is used without units; "
+    }
+};
+@function em($pixel) {
+    @if math.is-unitless($pixel) {
+        //divide $pixel by 16 to ems if dont have units
+        @return math.div($pixel, 16)+em;
+    }
+    @else {
+        @error "Rem function is used without units; "
+    }
+};

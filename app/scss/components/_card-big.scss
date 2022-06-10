@@ -1,0 +1,75 @@
+@mixin card($height: auto, $min-width: auto){
+  height: $height;
+  min-width: $min-width;
+  border-radius: 0;
+  border: 0;
+  .card-img{
+    height: $height;
+  }
+  .card-img-overlay{
+    margin-left: 11px;
+    margin-right: 11px;
+    height: $height;
+    min-width: $min-width;
+  }
+  &__footer{ 
+    height: rem(75);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: rem(25);
+    border: 1px solid #909090;
+    &-active{
+      font-size: 22px;
+      font-weight: 600;
+
+    }
+    &-inactive{
+      margin-left: 30px;
+      color: $secondary;
+      text-decoration: line-through;
+      text-transform: uppercase;
+    }
+  }
+}
+// &__footer{ 
+//   height: rem(75);
+//   display: flex;
+//   justify-content: start;
+//   align-items: center;
+//   padding-left: rem(25);
+//   border: 1px solid #909090;
+// }
+//default card
+.card{
+  @include card;
+}
+//big card
+//first height then width, without units
+.card-big {
+    @include card(rem(470),rem(18.5));
+  }
+.card-small {
+  @include card(rem(250), 20%);
+  .card-img-overlay{
+    display: none;
+
+  }
+  .circle__card{
+    opacity: 1;
+  }
+  &:hover{
+    .circle__card{
+      opacity: 1;
+    }
+    .card-img-overlay{
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items:  center;
+      cursor: pointer;
+      background-color: rgba(191, 191, 191,0.5);
+    }
+  }
+ 
+}
