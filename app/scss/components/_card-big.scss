@@ -1,0 +1,17 @@
+@mixin card($h: auto, $mw: auto){
+  height:$h;
+  min-width: $mw;
+  .card-img{
+    height: $h;
+  }
+}
+//default card
+.card{
+  @include card;
+}
+//big card
+//first height then width, without units
+.card-big {
+  border: 0;
+    @include card(rem(470),rem(18.5));
+  }

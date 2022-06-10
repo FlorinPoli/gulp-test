@@ -1,0 +1,28 @@
+.footer {
+    background-color: #252422;
+    min-height: rem(360);
+    width: 100%;
+    bottom:0;
+    position: relative;
+    &__title {
+    
+      font-size: rem(30);
+      letter-spacing: rem(1);
+      font-weight: 400;
+    }
+
+    .img {
+      width: rem(100);
+      height: rem(35);
+    }
+  
+    .logo {
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+  
+    svg {
+      fill: white;
+    }
+  
+  }

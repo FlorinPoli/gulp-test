@@ -1,0 +1,29 @@
+html {
+  overflow-x: none;
+  font-size: 100%;
+}
+header{
+    background-color: darkgray;
+    height: rem(380);
+    margin-bottom: rem(90);
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    svg {
+      fill: black;
+    }
+  }
+  body{
+    .title{
+      @include principal-title();
+    }
+    .secondary-title{
+      @include secondary-title();
+    }
+  }
+
+  section, footer{
+    padding-right: $padding-x-custom;
+    padding-left: $padding-x-custom;
+  }

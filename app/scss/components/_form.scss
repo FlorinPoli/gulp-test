@@ -1,0 +1,39 @@
+.form {
+  margin-bottom: rem(20);
+
+  &__img {
+    width: rem(770);
+  }
+
+  &__right {
+    margin-left: rem(30);
+  }
+
+  &__title {
+    @include principal-title();
+  }
+
+  &__group {
+    margin-bottom: rem(65);
+
+    &--title {
+      text-transform: uppercase;
+      font-size: rem(13);
+      font-weight: 700;
+    }
+
+    &--smallTitle {
+      margin-bottom: rem(12);
+      font-size: rem(13);
+      text-transform: capitalize;
+      color: $secondary;
+    }
+  }
+}
+@include breakpoint(xs) {
+  .form {
+    &__img {
+      min-height: rem(320);
+    }
+  }}
+@include breakpoint(sm){}
