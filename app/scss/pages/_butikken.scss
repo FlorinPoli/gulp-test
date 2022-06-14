@@ -1,0 +1,36 @@
+.zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    margin: {bottom: rem(120);
+        top: 120px;}
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60vw;
+            height: auto;
+            margin{
+                left: rem(30);
+                right: rem(30);
+            };
+            .btn {
+                border-radius: 0;
+                width: auto;
+            }
+        }
+}
+
+@include breakpoint(xs){
+    .zone{
+        min-height: 600px;
+        margin-bottom: rem(285);
+        &__wrapper {
+            justify-content: center;
+            flex-direction: row;
+        }
+     
+    }
+}

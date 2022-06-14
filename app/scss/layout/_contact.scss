@@ -1,23 +1,36 @@
-
-
 .contact {
-    min-height: rem(200);
-    background-color: #a39064;
-  
-    p{
-      font-size: rem(40);
-      margin: {
-        
-        bottom: rem(60);
-        top: rem(60);
-      }
+  display: flex;
+  flex-direction: column;
+  min-height: rem(200);
+  background-color: #a39064;
+  color: white;
+  align-items: center;
+  justify-content:  start;
+  padding-bottom: 120px;
+  p {
+    font-size: rem(40);
+    margin: {
+      bottom: rem(60);
+      top: rem(60);
     }
-    .btn {
-      border: 1px solid white;
-      color: white;
-      min-width: rem(190);
-      font-size: rem(13);
-      font-weight: 600;
-    }
-  
   }
+
+  .btn {
+    border: 1px solid white;
+    color: white;
+    min-width: rem(190);
+    font-size: rem(13);
+    font-weight: 600;
+  }
+}
+
+@include breakpoint (s) {
+ .contact{
+  flex-direction: row;
+  padding-bottom: 0;
+ }
+
+  p {
+    margin-right: rem(30);
+  }
+}

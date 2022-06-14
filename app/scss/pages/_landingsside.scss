@@ -1,0 +1,28 @@
+.btn-refresh {
+   
+}
+
+.person-group {
+    background-color: #23201e;
+    height: auto;
+    color: white;
+    justify-content: center;
+    p {
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    h3 {
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 100px;
+    }
+   
+    
+}
+
+@include breakpoint(xs){
+        
+}

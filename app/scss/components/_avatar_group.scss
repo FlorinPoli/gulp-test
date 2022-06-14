@@ -1,8 +1,30 @@
-.avatar_group{
+.avatar_group {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 140px;
     margin-bottom: 40px;
+}
+
+.align-group-horizontal {
+    max-width: rem(680);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fades{
+    display: flex;
+}
+
+@include breakpoint(xs) {
+    .avatar_group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        max-width: 400px;
+    }
 }

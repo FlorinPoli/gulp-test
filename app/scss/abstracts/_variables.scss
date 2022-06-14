@@ -7,8 +7,8 @@ $muted: rgba(255, 255, 255, 0.5);
 $colors:(
     "primary":$primary,
     "secondary": $secondary,
-    "dark": black,
-    "white": white,
+    "dark": #000000,
+    "white": #f4f4f4,
     "muted": $muted,
 );
 
@@ -16,4 +16,4 @@ $base-border-radius: rem(50);
 $base-padding: 1px;
 $base-border-thickness: rem(1);
 
-$padding-x-custom: 19.35vw;
+$padding-x-custom: 19.3vw;

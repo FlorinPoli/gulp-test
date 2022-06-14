@@ -2,56 +2,50 @@ html {
   overflow-x: none;
   font-size: 100%;
 }
-header{
-  height: rem(380);
+
+header {
   margin-bottom: rem(90);
-  a{
+
+  a {
     text-decoration: none;
   }
-  .bottomOne {
+}
 
-    &__logo {
-      width: rem(200);
-    }
-    &__span {
-      margin-top: rem(115);
-      font-size: 40px;
-    }
+body {
+  background-color: #ffffff;
+  .title {
+    @include principal-title();
   }
-  .topOne {
-    &__call {
-      margin-right: rem(10);
-    }
-    &__icon {
-      padding: {
-        top: rem(10);
-        right: rem(38);
-      }
-    }
-    &__last {
-      padding-top: rem(10);
-    }
-    .vr {
-      margin: {
-        left: rem(30);
-        right: rem(30);
-      }
-    }
-  }
-  
 
-
+  .secondary-title {
+    @include secondary-title();
   }
-  body{
-    .title{
-      @include principal-title();
-    }
-    .secondary-title{
-      @include secondary-title();
+}
+
+section,
+footer, header {
+  padding: {
+    right: 5vw;
+    left: 5vw;
+  }
+}
+
+.content{
+  margin-bottom: 90px;
+}
+
+.map{
+  width: 100vw;
+}
+
+@include breakpoint(xs) {
+
+  section,
+  footer, header {
+    padding: {
+      right: $padding-x-custom;
+      left: $padding-x-custom ;
     }
   }
 
-  section, footer{
-    padding-right: $padding-x-custom;
-    padding-left: $padding-x-custom;
-  }
+}

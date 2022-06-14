@@ -1,21 +1,28 @@
 .form {
-  margin-bottom: rem(20);
+  margin-bottom: rem(80);
 
   &__img {
-    width: rem(770);
+    margin-right: 30px;
+    margin-left: 30px;
+    height: 100%;
+    max-width: 100%;
+    padding: 0;
   }
-
   &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: rem(400);
     margin-left: rem(30);
   }
 
   &__title {
     @include principal-title();
   }
-
+  &__description{
+    margin-top: rem(300);
+  }
   &__group {
-
-    margin-bottom: rem(65);
 
     &--title {
       text-transform: uppercase;
@@ -31,27 +38,18 @@
     }
   }
 }
+
 @include breakpoint(xs) {
   .form {
-    &__img {
-      margin-right: 30px;
-      margin-left: 30px;
-      height: 100%;
-      max-width: 100%;
-      margin:0;
-      padding: 0;
-    }
-    &__right{
-      margin-top: rem(50);  
-    }
-  }
-}
-
-@include breakpoint(sm){
-  .from {
     &__img{
-      height: rem(420);
-
+      width: 500px;
+    }
+    &__imgWrapper{
+      margin-bottom: rem(900);
+      width: 300px;
     }
   }
 }
+
+
+

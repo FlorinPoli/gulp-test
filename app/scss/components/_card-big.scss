@@ -14,22 +14,9 @@
   }
   &__footer{ 
     height: rem(75);
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: rem(25);
     border: 1px solid #909090;
-    &-active{
-      font-size: 22px;
-      font-weight: 600;
-
-    }
-    &-inactive{
-      margin-left: 30px;
-      color: $secondary;
-      text-decoration: line-through;
-      text-transform: uppercase;
-    }
+    display: flex;
+    
   }
 }
 // &__footer{ 
@@ -47,13 +34,13 @@
 //big card
 //first height then width, without units
 .card-big {
+  border: 0;
     @include card(rem(470),rem(18.5));
   }
 .card-small {
   @include card(rem(250), 20%);
   .card-img-overlay{
     display: none;
-
   }
   .circle__card{
     opacity: 1;
@@ -71,5 +58,4 @@
       background-color: rgba(191, 191, 191,0.5);
     }
   }
- 
 }

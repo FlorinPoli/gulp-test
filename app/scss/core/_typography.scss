@@ -3,12 +3,9 @@ h1,h2,h3{
     font-weight: 700;
     margin-top: 0;
 }
-
 h1{
     font-size: clamp(rem(24), rem(14) + 2vw, rem(44) );
 }
-
-
 p{
     margin-top: 0;
 }

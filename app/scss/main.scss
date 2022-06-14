@@ -5,7 +5,7 @@
 
 @import "layout/_footer";
 @import "layout/boilerplate";
-@import "layout/smallHeader";
+
 @import "layout/header";
 @import "layout/copyright";
 @import "layout/contact";
@@ -22,10 +22,19 @@
 @import "components/miniHeader";
 @import "components/video";
 @import "components/avatar_group";
+@import "components/contactInput";
+@import "components/menu";
+@import "components/price";
+@import "components/program";
 
 @import "core/typography";
 
-@import "pages/foreside";
+@import "pages/landingsside";
+@import "pages/forside";
+@import "pages/butikken";
+@import "pages/medarbejder";
+@import "pages/kontakt"; 
+
 
 .group{
   &__small{

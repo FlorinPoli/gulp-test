@@ -1,0 +1,38 @@
+.wrapper-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.info-contact{
+    flex-direction: column;
+    justify-content: space-around;
+}
+.wrapper-contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: {
+        top: 100px;
+        bottom: 100px;
+    }
+    &__custom-display {
+        display: flex;
+        justify-content: space-around;
+        .contact-input {
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+    }
+    .contact-input {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+@include breakpoint (s){
+    .info-contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

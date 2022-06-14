@@ -4,4 +4,9 @@
     color: #686a5f;
     background-color: #141412;
     min-height: rem(60);
+    text-align: center;
+  }
+
+  @include breakpoint (xs){
+
   }

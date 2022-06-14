@@ -1,0 +1,20 @@
+
+.contact-input {
+    min-height: rem(55);
+    padding: {
+        left: rem(20);
+        top: rem(10);
+        bottom: rem(10);
+    }
+    
+    &::placeholder {
+        font-style: italic;
+        font-weight: 600;
+    }
+}
+
+@include breakpoint(xs){ 
+    .contact-input {
+        width: rem(580);
+    }
+}
