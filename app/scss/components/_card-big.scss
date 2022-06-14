@@ -47,6 +47,7 @@
 //big card
 //first height then width, without units
 .card-big {
+  border: 0;
     @include card(rem(470),rem(18.5));
   }
 .card-small {

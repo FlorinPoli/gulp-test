@@ -3,10 +3,11 @@ html {
   font-size: 100%;
 }
 header{
-  height: rem(380);
-  margin-bottom: rem(90);
+    background-color: darkgray;
+    height: rem(380);
+    margin-bottom: rem(90);
   a{
-    text-decoration: none;
+      text-decoration: none;
   }
   .bottomOne {
 
@@ -37,7 +38,9 @@ header{
         right: rem(30);
       }
     }
-  }
+    svg {
+      fill: black;
+    }
   
 
 

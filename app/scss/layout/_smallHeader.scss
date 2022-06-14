@@ -1,0 +1,21 @@
+.topOne {
+    &__call {
+      margin-right: rem(10);
+    }
+    &__icon {
+      padding: {
+        top: rem(10);
+        right: rem(38);
+      }
+    }
+    &__last {
+      padding-top: rem(10);
+    }
+    .vr {
+      margin: {
+        left: rem(30);
+        right: rem(30);
+      }
+    }
+  }
+  

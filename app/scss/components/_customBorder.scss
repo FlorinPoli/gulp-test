@@ -1,12 +1,12 @@
 @mixin custom-border($width: 100%, $color: black){
   background-color: $color;
-  height: rem(2);
+    height: rem(2);
   width: $width;
-  margin: {
-    top: rem(30);
-    bottom: rem(30);
+    margin: {
+      top: rem(30);
+      bottom: rem(30);
+    }
   }
-}
 
 
 .border-w90 {
