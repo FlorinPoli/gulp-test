@@ -3,59 +3,201 @@
   min-width: $min-width;
   border-radius: 0;
   border: 0;
-  .card-img{
-    height: $height;
-  }
-  .card-img-overlay{
-    margin-left: 11px;
-    margin-right: 11px;
+
+  .card-img {
     height: $height;
     min-width: $min-width;
+    border-radius: 0;
   }
-  &__footer{ 
+
+  .card-img-overlay {
+    height: $height;
+   
+  }
+
+  &__footer {
     height: rem(75);
     border: 1px solid #909090;
     display: flex;
-    
   }
 }
-// &__footer{ 
-//   height: rem(75);
-//   display: flex;
-//   justify-content: start;
-//   align-items: center;
-//   padding-left: rem(25);
-//   border: 1px solid #909090;
-// }
+
 //default card
-.card{
+.card {
   @include card;
+
 }
+
 //big card
-//first height then width, without units
+//first height then width
 .card-big {
   border: 0;
-    @include card(rem(470),rem(18.5));
+  @include card(rem(470), rem(18.5));
+  .btn{
+    width: 18.5rem;
+    margin: {
+      left: 5%;
+      right: 5%;
+    };
   }
+}
+
+// .plus-minus {
+
+//   .one,
+//   .two {
+//     background-color: black;
+    
+//     width: 10px;
+//     height: 2px;
+//     border-radius: 30px;
+//   }
+//   .one {
+
+//     transform: rotate(90deg) translateX(2px);
+
+//   }
+
+//   .two {}
+// }
+
+.card-cut {
+
+
+  @include card(rem(340), rem(270));
+  position: relative;
+  width: auto;
+  display: flex;
+  // flex: 1 0 21%;
+  padding: 0;
+  margin-bottom: 220px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  &:after {
+    content: "";
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    clip-path: polygon(100% 0, 100% 93%, 89% 100%, 0 100%, 0 0);
+  }
+
+  &:hover {
+    .plus-minus {
+      transition: translate 1s;
+      margin-top: 3px;
+      &--one {
+        display: none;
+      }
+    }
+    .card-img-overlay {
+      display: flex;
+    }
+  }
+
+  .badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 340px;
+    width: 100%;
+    // bag do not let me hover over circle
+    position: absolute;
+    margin-left: 5px;
+  }
+
+  .circle {
+    background-color: white;
+    z-index: 2;
+    color: black;
+    svg {
+      fill: black;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+      svg,
+      img {
+        fill: white;
+      }
+    }
+  }
+
+  .card-img {
+    display: block;
+    width: 100%;
+    object-fit: fill;
+    clip-path: polygon(100% 0, 100% 93%, 89% 100%, 0 100%, 0 0);
+  }
+
+  .card-img-overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(325deg, transparent 20px, $lightBlack 20px);
+  }
+}
+
 .card-small {
   @include card(rem(250), 20%);
-  .card-img-overlay{
+
+  .card-img-overlay {
     display: none;
+   
+    margin-left: 11px;
+    margin-right: 11px;
+   
   }
-  .circle__card{
+
+  .circle__card {
     opacity: 1;
   }
-  &:hover{
-    .circle__card{
+
+  &:hover {
+    .circle__card {
       opacity: 1;
     }
-    .card-img-overlay{
+
+    .card-img-overlay {
       padding: 0;
       display: flex;
       justify-content: center;
-      align-items:  center;
+      align-items: center;
       cursor: pointer;
-      background-color: rgba(191, 191, 191,0.5);
+      background-color: rgba(191, 191, 191, 0.5);
     }
+  }
+}
+
+
+
+
+.card-footer-custom {
+  padding-top: 30px;
+
+  h,
+  p {
+    line-height: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  h {
+    font-size: 20px;
+    font-weight: $fw-title;
+  }
+
+  p {
+    font-weight: 500;
+    color: grey;
+  }
+}
+
+@include breakpoint(xs) {
+  .card-cut {
+    margin-bottom: 180px;
+    margin-right: 0;
   }
 }

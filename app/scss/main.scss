@@ -9,7 +9,7 @@
 @import "layout/header";
 @import "layout/copyright";
 @import "layout/contact";
-@import "layout/grid";
+// @import "layout/grid";
 
 @import "components/circle";
 @import "components/description";
@@ -26,6 +26,8 @@
 @import "components/menu";
 @import "components/price";
 @import "components/program";
+@import "components/plus-minus";
+@import "components/bredCrumbs";
 
 @import "core/typography";
 
@@ -34,6 +36,8 @@
 @import "pages/butikken";
 @import "pages/medarbejder";
 @import "pages/kontakt"; 
+@import "pages/produkt";
+@import "pages/ansatte";
 
 
 .group{

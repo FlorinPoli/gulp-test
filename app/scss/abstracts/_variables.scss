@@ -1,7 +1,12 @@
 
+//font weight 
+$fw-title: 800;
+
+//colors
 $primary:#ffcc00;
 $secondary: #4b4b4b;
 $muted: rgba(255, 255, 255, 0.5);
+$lightBlack: rgba(0, 0, 0, 0.5);;
 
 
 $colors:(
@@ -12,8 +17,10 @@ $colors:(
     "muted": $muted,
 );
 
+//border 
 $base-border-radius: rem(50);
-$base-padding: 1px;
-$base-border-thickness: rem(1);
+$base-border-thickness: rem(2);
 
+//padding
+$base-padding: 1px;
 $padding-x-custom: 19.3vw;

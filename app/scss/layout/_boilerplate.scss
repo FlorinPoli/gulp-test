@@ -3,12 +3,13 @@ html {
   font-size: 100%;
 }
 
+ul{
+  list-style-type: none;
+}
 header {
   margin-bottom: rem(90);
 
-  a {
-    text-decoration: none;
-  }
+  
 }
 
 body {
@@ -33,7 +34,9 @@ footer, header {
 .content{
   margin-bottom: 90px;
 }
-
+a {
+  text-decoration: none;
+}
 .map{
   width: 100vw;
 }

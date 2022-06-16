@@ -1,6 +1,6 @@
 @mixin header($bgu-color: grey, $link-color: black, $height: rem(380)) {
   background-color: $bgu-color;
-  height: $height;
+  min-height: $height;
   a {
     color: $link-color;
   }
@@ -17,6 +17,9 @@
   }
 
   .bottomOne {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh; 
     &__logo {
       width: rem(200);
     }
@@ -52,12 +55,58 @@
       }
 
     }
-
     .vr {
       visibility: hidden;
     }
+   
   }
+  .nav{
+    z-index: 55;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 0;
+    background-color: #ffffff;
+    border: 1px solid;
+    height: 100vh;
+    transition:  1s;
+    &__wrapper{
+      margin-top: 20px;
+      width: 90%;
+      padding: {
+        left: 35px;
+       
+      };
+      &--img{
+        width: 150px;
+        margin-top: 20px;
+      }
+    }
+    &__list{
+      padding-left: 5px;
+    }
+    &__link{
+      color: black;
+      height: 50px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      justify-content: start;
+      border-bottom: 1px solid darkgray;
+    
+    }
+    &--active{
+      color: #bd9e6c;
+    }
+   
+   
+  } 
+
+
 }
+
+
 
 .header {
   @include header;
@@ -71,6 +120,8 @@
   @include header(darkgrey, #f4f4f4, rem(800));
 
 }
+
+
 
 @include breakpoint(s) {
   .header {
@@ -91,3 +142,4 @@
 
   }
 }
+

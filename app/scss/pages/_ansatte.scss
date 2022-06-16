@@ -1,0 +1,26 @@
+.ansatteDe {
+    background-color: #f3f3f3;
+    margin: {
+        top: 200px;
+    }
+
+    height: auto;
+}
+
+.ansatteGroup {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+}
+
+@include breakpoint(lg) {
+    .ansatteGroup {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}

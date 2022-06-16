@@ -1,0 +1,14 @@
+.plus-minus {
+  &--one,  &--two {
+    background-color: black;
+    width: rem(10);
+    height: rem(2);
+    border-radius: rem(30);
+  }
+
+  &--one {
+    transform: rotate(90deg) translateX(2px);
+  }
+
+
+}
