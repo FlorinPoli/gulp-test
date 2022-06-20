@@ -1,4 +1,4 @@
-@mixin card($height: auto, $min-width: auto){
+@mixin card($height: auto, $min-width: auto) {
   height: $height;
   min-width: $min-width;
   border-radius: 0;
