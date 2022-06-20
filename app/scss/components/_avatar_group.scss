@@ -1,22 +1,39 @@
-.avatar_group {
-    display: flex;
-    flex-direction: column;
+.personGroup {
+    background-color: #23201e;
+    height: auto;
+    color: white;
     justify-content: center;
-    align-items: center;
-    margin-top: 140px;
-    margin-bottom: 40px;
-}
-
-.align-group-horizontal {
-    max-width: rem(680);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.fades{
-    display: flex;
+    p {
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    h3 {
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 100px;
+    }
+    &--fades{
+        display: flex;
+    }
+    &__avatarGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 140px;
+        margin-bottom: 40px;
+    }
+    
+    &__group{
+        max-width: rem(680);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @include breakpoint(xs) {

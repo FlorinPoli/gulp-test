@@ -6,11 +6,11 @@ $hoverColor: black;
 
 
 @mixin circle($diameter: $diameter,
-             $color: $color,
-             $bg-color: $secondary,
-             $svgRadius: $svgRadius,
-             $hoverColor: $hoverColor) 
-{
+    $color: $color,
+    $bg-color: $secondary,
+    $svgRadius: $svgRadius,
+    $hoverColor: $hoverColor) {
+        
     display: flex;
     font-size: rem(18);
     align-items: center;
@@ -21,7 +21,6 @@ $hoverColor: black;
     height: $diameter;
     border-radius: rem(50);
     background-color: $bg-color;
-    
     svg,
     img {
         fill: $color;
@@ -41,36 +40,35 @@ $hoverColor: black;
 }
 
 .circle__card {
-    
-    @include circle(rem(60),white ,black, rem(30) , black );
-    
+    @include circle(rem(60), white, black, rem(30), black);
 }
 
 .circle__top__card {
-    @include circle(rem(80),white ,black, rem(30) , black );
+    @include circle(rem(80), white, black, rem(30), black);
     font-size: rem(13);
     text-transform: uppercase;
-    p{
-       margin-top:auto;
-       margin-bottom:  auto;
-       margin-right: 50%;
-       margin-left: 50%;
-       text-align: center;
+
+    p {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 50%;
+        margin-left: 50%;
+        text-align: center;
     }
 }
 
 .circle_white {
-    @include circle(rem(80), black ,white,rem(80), white );
+    @include circle(rem(80), black, white, rem(80), white);
     margin-left: rem(12);
     margin-right: rem(12);
     z-index: 1;
     opacity: 0.85;
-    }
-.circle_fade{
-    @include circle(rem(70), black ,$secondary,rem(70), $secondary );
+}
+
+.circle_fade {
+    @include circle(rem(70), black, $secondary, rem(70), $secondary );
     margin-left: 20px;
     margin-right: 20px;
     z-index: 1;
     opacity: 0.5;
 }
-

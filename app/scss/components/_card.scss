@@ -1,20 +1,18 @@
-@mixin card($height: auto, $min-width: auto){
+@mixin card($height: auto, $min-width: auto) {
   height: $height;
   min-width: $min-width;
   border-radius: 0;
   border: 0;
-
-  .card-img {
-    height: $height;
-    min-width: $min-width;
-    border-radius: 0;
+  .card{
+    &-img {
+      height: $height;
+      min-width: $min-width;
+      border-radius: 0;
+    }
+    &-img-overlay {
+      height: $height;
+    }
   }
-
-  .card-img-overlay {
-    height: $height;
-   
-  }
-
   &__footer {
     height: rem(75);
     border: 1px solid #909090;
@@ -34,7 +32,7 @@
   border: 0;
   @include card(rem(470), rem(18.5));
   .btn{
-    width: 18.5rem;
+   
     margin: {
       left: 5%;
       right: 5%;
@@ -42,28 +40,7 @@
   }
 }
 
-// .plus-minus {
-
-//   .one,
-//   .two {
-//     background-color: black;
-    
-//     width: 10px;
-//     height: 2px;
-//     border-radius: 30px;
-//   }
-//   .one {
-
-//     transform: rotate(90deg) translateX(2px);
-
-//   }
-
-//   .two {}
-// }
-
 .card-cut {
-
-
   @include card(rem(340), rem(270));
   position: relative;
   width: auto;
@@ -177,14 +154,14 @@
 .card-footer-custom {
   padding-top: 30px;
 
-  h,
+  h5,
   p {
     line-height: none;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 
-  h {
+  h5 {
     font-size: 20px;
     font-weight: $fw-title;
   }

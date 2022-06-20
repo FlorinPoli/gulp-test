@@ -5,10 +5,10 @@
 
 @import "layout/_footer";
 @import "layout/boilerplate";
-
 @import "layout/header";
 @import "layout/copyright";
 @import "layout/contact";
+@import "layout/nav";
 // @import "layout/grid";
 
 @import "components/circle";
@@ -16,7 +16,7 @@
 @import "components/form";
 @import "components/customBorder";
 @import "components/arrow";
-@import "components/card-big";
+@import "components/card";
 @import "components/button";
 @import "components/spinner";
 @import "components/miniHeader";
@@ -28,6 +28,7 @@
 @import "components/program";
 @import "components/plus-minus";
 @import "components/bredCrumbs";
+@import "components/carousel";
 
 @import "core/typography";
 

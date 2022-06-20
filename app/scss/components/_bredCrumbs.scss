@@ -1,23 +1,23 @@
 .bred{
-    padding: 10px 16px;
+    display: inline;
+    padding: 0;
     list-style: none;
-    li{
+    padding-top: rem(120);
+    &__crumbs{
         display: inline;
-        font-size: 18px;
-    }
-    li+li::before{
-        padding: 8px;
-        color: black;
-        content: "/\00a0";
-    }
-    a{
-        cursor: pointer;
+        font-size: 33px;
         text-transform: uppercase;
-        color: red;
-        &:hover{
-            color: #01447e;
-            text-decoration: underline;
+        &--link{
+            cursor: pointer;
+            // color: red!important;
+            &:hover{
+                color: #01447e;
+                text-decoration: underline;
+            }
         }
-
+    }
+    &__crumbs+&__crumbs:before{
+        padding: 8px;
+        content: "/\00a0";
     }
 }

@@ -1,9 +1,11 @@
 @mixin header($bgu-color: grey, $link-color: black, $height: rem(380)) {
   background-color: $bgu-color;
   min-height: $height;
-  a {
+
+  a,li {
     color: $link-color;
   }
+
   svg {
     fill: $link-color;
   }
@@ -11,20 +13,27 @@
   &__span {
     margin-top: rem(115);
   }
-
   .vr {
     color: $link-color;
   }
 
   .bottomOne {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5vh; 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    text-transform: uppercase;
+
     &__logo {
       width: rem(200);
     }
 
+    &__huge {
+      font-size: 100px;
+      color: $link-color;
+    }
+
     &__span {
+      color: $link-color !important;
       margin-top: rem(115);
       font-size: 40px;
     }
@@ -55,91 +64,43 @@
       }
 
     }
+
     .vr {
       visibility: hidden;
     }
-   
+
   }
-  .nav{
-    z-index: 55;
-    position: absolute;
-    top:0;
-    right: 0;
-    width: 0;
-    background-color: #ffffff;
-    border: 1px solid;
-    height: 100vh;
-    transition:  1s;
-    &__wrapper{
-      margin-top: 20px;
-      width: 90%;
-      padding: {
-        left: 35px;
-       
-      };
-      &--img{
-        width: 150px;
-        margin-top: 20px;
-      }
-    }
-    &__list{
-      padding-left: 5px;
-    }
-    &__link{
-      color: black;
-      height: 50px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      justify-content: start;
-      border-bottom: 1px solid darkgray;
-    
-    }
-    &--active{
-      color: #bd9e6c;
-    }
-   
-   
-  } 
-
-
 }
-
-
 
 .header {
   @include header;
 }
 
-.header-case {
+.header-small-dark{
   @include header(#f4f4f4, black, rem(380));
 }
-
-.header-big {
-  @include header(darkgrey, #f4f4f4, rem(800));
-
+.header-small-white{
+  @include header(#5c5648, #f4f4f4, rem(380));
 }
-
-
+.header-big-dark{
+  @include header(#f4f4f4, black, rem(800));
+}
+.header-big-white{
+  @include header(darkgrey, #f4f4f4, rem(800));
+}
 
 @include breakpoint(s) {
   .header {
-   
     .topOne {
       flex-direction: row;
       justify-content: end;
-
       .vr {
         visibility: visible;
-
         margin: {
           left: rem(30);
           right: rem(30);
         }
       }
     }
-
   }
 }
-

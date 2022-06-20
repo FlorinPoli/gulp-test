@@ -3,10 +3,12 @@ const navToggler = () => {
   var x = document.getElementById("navToggler");
   if (x.className === "nav") {
     x.className += " responsive"
-    x.style.width = "320px";
+    x.style.right = "-5px";
+
   } else {
     x.className = "nav"
-    x.style.width = "0";
+    x.style.right = "-325px";
+   
   }
 }
 
@@ -27,10 +29,25 @@ const activeLink = () => {
   }
 }
 
-
-
 window.onload = function() {
   activeLink();
 };
 
 
+//multi carousel
+
+//Allows bootstrap carousels to display 3 items per page rather than just one
+$('.carousel.carousel-multi .item').each(function () {
+	var next = $(this).next();
+	if (!next.length) {
+		next = $(this).siblings(':first');
+	}
+	next.children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
+
+	if (next.next().length > 0) {
+		next.next().children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
+	}
+	else {
+		$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+	}
+});

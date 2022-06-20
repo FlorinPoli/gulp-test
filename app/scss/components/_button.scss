@@ -1,52 +1,56 @@
-
-@mixin btn($bg: transparent){
+@mixin btn($bg: transparent) {
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
-    border:2px;
+    border: 2px;
     padding: {
-        top:$base-padding *10;
+        top: $base-padding *10;
         bottom: $base-padding *10;
         left: $base-padding *16;
         right: $base-padding *16;
-    } 
-    background-color: #fff;
+    }
+    // background-color: #fff;
     background: $bg;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    min-width: rem(20); 
+    min-width: rem(20);
     min-height: rem(20);
 }
+
 //default button
-.btn{
+.btn {
     @include btn;
 }
-@each $key, $val in $colors{
+@each $key,
+$val in $colors {
     //filled buttons 
-    .btn-#{$key}{
+    .btn-#{$key} {
         @include btn($val);
         background-color: $val;
-        &:hover{
-            background-color: lighten($val,10);
+        &:hover {
+            background-color: lighten($val, 50);
         }
     }
     //outlined buttons 
-    .btn-outlined-#{$key}{
+    .btn-outlined-#{$key} {
         @include btn();
         border: $base-border-thickness solid $val;
-        &:hover{
+        color: $val;
+
+        &:hover {
+            color: invert($val, 100%);
             background-color: $val;
         }
     }
 }
 
-@include breakpoint(xs){
-    .btn{
+@include breakpoint(xs) {
+    .btn {
         font-size: 16px;
         font-weight: 600;
         text-transform: uppercase;
-        min-width: rem(140); 
+        min-width: rem(140);
         min-height: rem(55);
     }
 }
