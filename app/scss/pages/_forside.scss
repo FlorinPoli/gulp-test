@@ -18,12 +18,8 @@
         top: rem(120);
         bottom: rem(120);
     }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: fit;
-    }
+    
+  
 
 
     &--item1 {
@@ -43,6 +39,7 @@
     }
 }
 
+
 .card-carousel {
     display: flex;
     height: 800px;
@@ -55,9 +52,7 @@
     .grid {
         grid-template-rows: rem(245) rem(245);
         gap: rem(30);
-
-
-        grid-template-columns: 24% 54% 24%;
+        grid-template-columns: 23% 49% 23%;
         grid-template-areas: "item1 item2 item3"
             "item1 item2 item4";
     }

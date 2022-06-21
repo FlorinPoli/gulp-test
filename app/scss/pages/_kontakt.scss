@@ -1,12 +1,35 @@
+.info-contact{
+    flex-direction: column;
+    justify-content: space-between;
+    h1{
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+}
+
 .wrapper-contact {
     display: flex;
     flex-direction: column;
     text-align: start;
+    margin-top: 60px;
+    .social{
+        display: flex;
+        font-weight: 700;
+        font-size: 21px;
+        align-items: flex-end;
+        color: black;
+        svg{
+            fill: black;
+        }
+        
+        .svg-wrapper:not(:last-child){
+            margin-right: 30px;
+        }
+    }
 }
-.info-contact{
-    flex-direction: column;
-    justify-content: space-around;
-}
+
+
+
 .wrapper-contact-form {
     display: flex;
     flex-direction: column;
@@ -16,22 +39,31 @@
     }
     &__custom-display {
         display: flex;
-        justify-content: space-around;
+        
+        flex-direction: column;
         .contact-input {
-            &:not(:first-child) {
-                margin-left: 30px;
-            }
+            
         }
     }
-    &--contact-input {
+    .contact-input {
         width: 100%;
         margin-bottom: 30px;
     }
 }
-@include breakpoint (s){
+@include breakpoint (lg){
     .info-contact{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: row; 
+    }
+    .wrapper-contact-form{
+        &__custom-display{
+            flex-direction: row;
+            justify-content: space-around;
+            .contact-input{
+                &:not(:first-child) {
+                    margin-left: 30px;
+                }
+            }
+        }
     }
 }

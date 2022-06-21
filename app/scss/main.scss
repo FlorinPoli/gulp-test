@@ -29,6 +29,8 @@
 @import "components/plus-minus";
 @import "components/bredCrumbs";
 @import "components/carousel";
+@import "components/headerElement";
+
 
 @import "core/typography";
 
@@ -43,9 +45,15 @@
 
 .group{
   &__small{
-    margin-bottom: 160px;
+    margin-bottom: rem(160);
   }
   &__big{
-    margin-bottom: 90px;
+    margin-bottom: 30px;
+  }
+}
+.imp{
+  margin: {
+    top: rem(60);
+    bottom: rem(120);
   }
 }

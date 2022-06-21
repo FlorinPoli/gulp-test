@@ -1,12 +1,13 @@
-.contact {
+@mixin contact (){
   display: flex;
   flex-direction: column;
   min-height: rem(200);
   background-color: #a39064;
   color: white;
   align-items: center;
-  justify-content:  start;
-  padding-bottom: 120px;
+  justify-content: start;
+  text-align: center;
+
   p {
     font-size: rem(40);
     margin: {
@@ -23,13 +24,22 @@
   }
 }
 
+.contact {
+ @include contact();
+}
+
 @include breakpoint (s) {
  .contact{
   flex-direction: row;
   padding-bottom: 0;
+  text-align: start;
   p {
     margin-right: rem(30);
   }
  }
-  
+}
+@include breakpoint(xl){
+ .contact{
+  height: rem(200);
+ }
 }

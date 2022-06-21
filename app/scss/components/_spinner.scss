@@ -1,5 +1,5 @@
 .spinner{
-     border: 5px solid lightgrey;
+  border: 5px solid lightgrey;
   border-top: 5px solid grey;
   border-radius: 50%;
   width: 50px;
@@ -13,5 +13,10 @@
     100% {
       transform: rotate(360deg);
     }
+  }
+}
+.spinner-wrapper{
+  margin: {
+    top: rem(90);
   }
 }

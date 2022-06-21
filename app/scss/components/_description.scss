@@ -1,20 +1,29 @@
-.description {
+@mixin description($padding-top:rem(70), $padding-bot:rem(70), $bgg-color:#ffffff){
   height: auto;
-  min-height: rem(640);
-  padding: {
-    bottom: 180px;
-    top: 180px;
-  };
-  &__paragraph {
-    margin-bottom: 0;
-  }
+  background-color: $bgg-color;
 
+  padding: {
+    top: $padding-top;
+    bottom: $padding-bot;
+  };
 }
 
+
+.description {
+  @include description();
+}
+
+.description-ansatte{
+  @include description(rem(180), rem(180), #f3f3f3);
+  min-height: rem(640);
+}
+.description-big-white{
+  @include description(rem(180), rem(180));
+  min-height: rem(640);
+}
+
+
+
 @include breakpoint(xs) {
-  .description {
-    &__paragraph {
-      margin-bottom: rem(50);
-    }
-  }
+
 }

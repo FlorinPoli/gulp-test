@@ -3,15 +3,13 @@
     height: auto;
     color: white;
     justify-content: center;
-    p {
+    p,h1,h3 {
         text-align: center;
     }
     h1 {
-        text-align: center;
         text-transform: uppercase;
     }
     h3 {
-        text-align: center;
         text-transform: capitalize;
         margin-bottom: 100px;
     }
@@ -36,12 +34,15 @@
     }
 }
 
-@include breakpoint(xs) {
-    .avatar_group {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-end;
-        max-width: 400px;
+@include breakpoint(s) {
+    .personGroup{
+        height: rem(550);
+        &__avatarGroup {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            max-width: 400px;
+        }
     }
 }

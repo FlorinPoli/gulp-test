@@ -2,3 +2,13 @@
     display: grid;
     grid-template-columns: auto auto;
 }
+.program1{
+    display: grid;
+    grid-template-columns: 25% auto;
+    .leftCol{
+        text-transform: capitalize;
+        font-weight: 700;
+
+        
+    }
+}

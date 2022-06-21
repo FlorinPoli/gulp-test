@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
+const purgecss = require('gulp-purgecss')
 // const bootstrap = require('bootstrap');
 const browsersync = require('browser-sync').create();
 
@@ -11,6 +12,7 @@ function scssTask(){
   return src('app/scss/main.scss', { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([cssnano()]))
+    .pipe(purgecss({content: ['*.html'] }))
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
 

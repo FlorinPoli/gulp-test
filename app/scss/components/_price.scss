@@ -2,15 +2,22 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-wrap: wrap;
     padding-left: rem(25); 
     font-size: 22px;
+    &-inactive{
+      margin-left: 30px;
+      color: $secondary;
+      text-decoration: line-through;
+      text-transform: uppercase;
+    }
+    &-active{
+      font-weight: 600;
+    }
 }
 .price-active{
-  font-weight: 600;
+  
 }
 .price-inactive{
-  margin-left: 30px;
-  color: $secondary;
-  text-decoration: line-through;
-  text-transform: uppercase;
+ 
 }

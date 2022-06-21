@@ -1,14 +1,15 @@
 
 const navToggler = () => {
-  var x = document.getElementById("navToggler");
-  if (x.className === "nav") {
-    x.className += " responsive"
-    x.style.right = "-5px";
+  var nav = document.getElementById("navToggler");
+  if (nav.className === "nav") {
+    nav.className += " responsive"
+    nav.style.right = "-5px";
+    //nav.width = "rem(325)";
 
   } else {
-    x.className = "nav"
-    x.style.right = "-325px";
-   
+    nav.className = "nav"
+    nav.style.right = "-325px";
+    //nav.width = "0";
   }
 }
 

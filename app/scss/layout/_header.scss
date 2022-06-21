@@ -1,4 +1,4 @@
-@mixin header($bgu-color: grey, $link-color: black, $height: rem(380)) {
+@mixin header($bgu-color: grey, $link-color: black, $height: rem(380),$margin-top: rem(115)) {
   background-color: $bgu-color;
   min-height: $height;
 
@@ -8,10 +8,6 @@
 
   svg {
     fill: $link-color;
-  }
-
-  &__span {
-    margin-top: rem(115);
   }
   .vr {
     color: $link-color;
@@ -34,7 +30,7 @@
 
     &__span {
       color: $link-color !important;
-      margin-top: rem(115);
+      margin-top:$margin-top;
       font-size: 40px;
     }
   }
@@ -83,10 +79,10 @@
   @include header(#5c5648, #f4f4f4, rem(380));
 }
 .header-big-dark{
-  @include header(#f4f4f4, black, rem(800));
+  @include header(#f4f4f4, black, rem(800), rem(180));
 }
 .header-big-white{
-  @include header(darkgrey, #f4f4f4, rem(800));
+  @include header(darkgrey, #f4f4f4, rem(800), rem(180));
 }
 
 @include breakpoint(s) {
@@ -100,6 +96,13 @@
           left: rem(30);
           right: rem(30);
         }
+      }
+    }
+  }
+  .header-big-light, .header-big-dark{
+    .bottomOne{
+      &__span{
+        margin-top: 0;
       }
     }
   }

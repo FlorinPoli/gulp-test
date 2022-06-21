@@ -2,7 +2,9 @@
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
+    text-align: center;
     border: 2px;
+    
     padding: {
         top: $base-padding *10;
         bottom: $base-padding *10;
@@ -16,6 +18,14 @@
     text-transform: uppercase;
     min-width: rem(20);
     min-height: rem(20);
+    span{
+        margin: {
+            top: $base-padding *2;
+            bottom: $base-padding *2;
+          
+        }
+
+    }
 }
 
 //default button

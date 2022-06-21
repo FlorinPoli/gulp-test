@@ -1,9 +1,10 @@
 .menu {
     text-transform: uppercase;
     font-size: 10px;
-    margin-bottom: rem(30);
+    margin-bottom: rem(50);
     display: flex;
     justify-content: space-around;
+    margin-top: rem(60);
     &__item {
         cursor: pointer;
         color: grey;

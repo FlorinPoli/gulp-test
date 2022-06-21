@@ -1,4 +1,4 @@
-@mixin card($height: auto, $min-width: auto) {
+@mixin card($height: auto, $min-width: auto, $js-content: flex-end, $ai: flex-start) {
   height: $height;
   min-width: $min-width;
   border-radius: 0;
@@ -11,6 +11,10 @@
     }
     &-img-overlay {
       height: $height;
+      display: flex;
+      align-items: $ai;
+      flex-direction: column;
+      justify-content: $js-content;
     }
   }
   &__footer {
@@ -31,26 +35,22 @@
 .card-big {
   border: 0;
   @include card(rem(470), rem(18.5));
-  .btn{
-   
-    margin: {
-      left: 5%;
-      right: 5%;
-    };
-  }
 }
 
+.card-forside{
+  @include card(100%, rem(18.5));
+ 
+}
 .card-cut {
   @include card(rem(340), rem(270));
   position: relative;
-  width: auto;
+  width: 270px;
   display: flex;
   // flex: 1 0 21%;
   padding: 0;
   margin-bottom: 220px;
   margin-left: 30px;
   margin-right: 30px;
-
   &:after {
     content: "";
     left: 0;
@@ -58,7 +58,6 @@
     opacity: 0.2;
     clip-path: polygon(100% 0, 100% 93%, 89% 100%, 0 100%, 0 0);
   }
-
   &:hover {
     .plus-minus {
       transition: translate 1s;
@@ -118,11 +117,10 @@
 }
 
 .card-small {
-  @include card(rem(250), 20%);
+  @include card(rem(200), rem);
 
   .card-img-overlay {
     display: none;
-   
     margin-left: 11px;
     margin-right: 11px;
    
@@ -154,22 +152,32 @@
 .card-footer-custom {
   padding-top: 30px;
 
-  h5,
+  h4,
   p {
     line-height: none;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
-
-  h5 {
+  h4 {
     font-size: 20px;
     font-weight: $fw-title;
   }
-
   p {
     font-weight: 500;
     color: grey;
   }
+  h5{
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  .wowzz{
+    display: flex;
+    flex-direction: column;
+  }
+  .wowyy{
+    display: flex;
+  }
+
 }
 
 @include breakpoint(xs) {
