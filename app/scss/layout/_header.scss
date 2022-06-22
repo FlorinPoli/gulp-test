@@ -36,7 +36,7 @@
     }
     &__burger{
       // is needed because __huge font size
-      margin-left: -25px;
+      margin-left: -35px;
     }
   }
 
@@ -44,26 +44,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    .social-head{
+      display: flex;
+      
+      div:not(:first-child){
+        padding-left: 30px;
+      }
 
+    }
     &__call {
       top: rem(10);
       margin-right: rem(10);
-    }
-
-    &__icon {
-      padding: {
-        top: rem(10);
-        right: rem(16);
-        left: rem(16);
-      }
-    }
-
-    &__last {
-      padding: {
-        top: rem(10);
-        left: rem(16);
-      }
-
     }
 
     .vr {
