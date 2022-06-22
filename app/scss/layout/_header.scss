@@ -1,7 +1,7 @@
 @mixin header($bgu-color: grey, $link-color: black, $height: rem(380),$margin-top: rem(115)) {
   background-color: $bgu-color;
   min-height: $height;
-
+  
   a,li {
     color: $link-color;
   }
@@ -15,23 +15,28 @@
 
   .bottomOne {
     display: flex;
-    justify-content: space-between;
-    margin-top: 5vh;
+    justify-content: none;
     text-transform: uppercase;
 
     &__logo {
-      width: rem(200);
+      width: rem(180);
     }
-
-    &__huge {
-      font-size: 100px;
-      color: $link-color;
-    }
-
     &__span {
       color: $link-color !important;
       margin-top:$margin-top;
-      font-size: 40px;
+      font-size: 26px;
+    }
+    &__huge {
+      font-size: 50px;
+      color: $link-color;
+      
+    }
+    &__btnWrapper{
+      margin-top: rem(40);
+    }
+    &__burger{
+      // is needed because __huge font size
+      margin-left: -25px;
     }
   }
 
@@ -87,6 +92,9 @@
 
 @include breakpoint(s) {
   .header {
+    .bottomOne{
+      justify-content: space-between ;
+    }
     .topOne {
       flex-direction: row;
       justify-content: end;
@@ -99,10 +107,18 @@
       }
     }
   }
-  .header-big-light, .header-big-dark{
+  .header-big-white,.header-big-dark{
     .bottomOne{
       &__span{
-        margin-top: 0;
+        font-size: 40px;
+      }
+      &__huge {
+        font-size: 100px;
+
+        margin-bottom: 0;
+      }
+      &__logo {
+        width: rem(200);
       }
     }
   }

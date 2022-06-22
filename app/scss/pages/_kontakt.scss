@@ -10,8 +10,12 @@
 .wrapper-contact {
     display: flex;
     flex-direction: column;
+    width: 80%;
     text-align: start;
     margin-top: 60px;
+    .program >div{
+        border-bottom: 1px solid;
+    }
     .social{
         display: flex;
         font-weight: 700;
@@ -55,10 +59,18 @@
         display: flex;
         flex-direction: row; 
     }
+    .wrapper-contact{
+
+        .program >div{
+            border-bottom: 0;
+        }
+    }
     .wrapper-contact-form{
+       
         &__custom-display{
             flex-direction: row;
             justify-content: space-around;
+         
             .contact-input{
                 &:not(:first-child) {
                     margin-left: 30px;

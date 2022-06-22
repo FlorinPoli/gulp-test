@@ -1,20 +1,21 @@
-.ansatteDe {
-    background-color: #f3f3f3;
-    margin: {
-        top: 200px;
-    }
-
-    height: auto;
-}
-
 .ansatteGroup {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-
     align-items: center;
+    margin-top: 100px;
 }
+
+.ansatteDe {
+    background-color: #f3f3f3;
+    margin: {
+        top: 200px;
+    }
+    height: auto;
+}
+
+
 
 @include breakpoint(lg) {
     .ansatteGroup {
