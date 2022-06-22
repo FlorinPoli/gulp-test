@@ -2,9 +2,7 @@
   background-color: $bgu-color;
   min-height: $height;
   
-  a,li {
-    color: $link-color;
-  }
+
 
   svg {
     fill: $link-color;
@@ -14,6 +12,9 @@
   }
 
   .bottomOne {
+    a{
+      color: $link-color;
+    }
     display: flex;
     justify-content: none;
     text-transform: uppercase;
@@ -41,6 +42,10 @@
   }
 
   .topOne {
+    a,li{
+      color: $link-color;
+    }
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;

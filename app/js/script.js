@@ -23,7 +23,7 @@ const activeLink = () => {
   for (let i = 0; i < links.length; i++) {
 
     if (links[i].href === currentLocation) {
-      links[i].className = "nav__link nav--active";
+      links[i].className = "nav__link nav-active";
     } else {
       links[i].className = "nav__link";
     }
