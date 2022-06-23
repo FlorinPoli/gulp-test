@@ -66,7 +66,7 @@
                         <button class=" btn btn-outlined-white"> om os</button>
                     </div>
                 </div>
-                <div onclick="navToggler()" class="bottomOne__burger mt-3 pt-2">
+                <div onclick="togglerNav()" class="bottomOne__burger mt-3 pt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 10 16">
                         <path fill-rule="evenodd"
@@ -77,9 +77,9 @@
         </div>
     </div>
 
-    <div id="navToggler" class="nav">
+    <div id="togglerNav" class="nav">
         <div class="nav__wrapper">
-            <div onclick="navToggler()">X</div>
+            <div onclick="togglerNav()">X</div>
             <img class="nav__wrapper--img" src="./images/logo-frontend-dark.svg" />
             <ul id="link-container" class="nav__list">
                 <li>
@@ -134,12 +134,64 @@
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-    <section class="container d-flex flex-column justify-content-center align-items-center">
+    <section class="content container">
         <div class="row g-4 mt-5">
             <div class="col-sm-12 col-lg-4">
+                <div class="card  card-big text-white">
+                    <img src="./images/image.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay align-items-end justify-content-between">
+                        <div class="circle__top__card">
+                            <p>Kanoagne</p>
+                        </div>
+                        <button type="button" class="btn  btn-dark  align-self-start">Jke design -
+                            stensballe <span class="arrow"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="price">
+                        <span class="price-active">16.495 DKK</span> <span class="price-inactive">21.595KR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+                <div class="card card-big center text-white">
+                    <img src="./images/image.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay align-items-end justify-content-between">
+                        <div class="circle__top__card">
+                            <p>Demo pris</p>
+                        </div>
+                        <button type="button" class="btn btn-dark btn-sm text-uppercase align-self-start">hb4
+                            taglejlighed <span class="arrow"></span></button>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="price">
+                        <span class="price-active">16.495 DKK</span> <span class="price-inactive">21.595KR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+                <div class="card card-big text-white">
+                    <img src="./images/image.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay align-items-end justify-content-between">
+                        <div class="circle__top__card">
+                            <p>NYHED</p>
+                        </div>
+                        <button type="button" class="btn btn-dark text-uppercase align-self-start">multiform, mettes
+                            Kokken <span class="arrow"></span></button>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="price">
+                        <span class="price-active">16.495 DKK</span> <span class="price-inactive">21.595KR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
                 <div class="card rounded-0 card-big text-white">
                     <img src="./images/image.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay d-flex flex-column align-items-end justify-content-between">
+                    <div class="card-img-overlay align-items-end justify-content-between">
                         <div class="circle__top__card">
                             <p>Kanoagne</p>
                         </div>
@@ -159,7 +211,7 @@
             <div class="col-sm-12 col-lg-4">
                 <div class="card card-big center text-white">
                     <img src="./images/image.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay d-flex flex-column align-items-end justify-content-between">
+                    <div class="card-img-overlay align-items-end justify-content-between">
                         <div class="circle__top__card">
                             <p>Demo pris</p>
                         </div>
@@ -176,62 +228,7 @@
             <div class="col-sm-12 col-lg-4">
                 <div class="card card-big text-white">
                     <img src="./images/image.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay d-flex flex-column align-items-end justify-content-between">
-                        <div class="circle__top__card">
-                            <p>NYHED</p>
-                        </div>
-                        <button type="button" class="btn btn-dark text-uppercase align-self-start">multiform, mettes
-                            Kokken <span class="arrow"></span></button>
-                    </div>
-                </div>
-                <div class="card__footer">
-                    <div class="price">
-
-                        <span class="price-active">16.495 DKK</span> <span class="price-inactive">21.595KR</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-                <div class="card rounded-0 card-big text-white">
-                    <img src="./images/image.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay d-flex flex-column align-items-end justify-content-between">
-                        <div class="circle__top__card">
-                            <p>Kanoagne</p>
-                        </div>
-
-                        <button type="button" class="btn btn-dark text-uppercase align-self-start">Jke design -
-                            stensballe <span class="arrow"></span>
-                        </button>
-
-                    </div>
-                </div>
-                <div class="card__footer">
-                    <div class="price">
-                        <span class="price-active">16.495 DKK</span> <span class="price-inactive">21.595KR</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-                <div class="card card-big center text-white">
-                    <img src="./images/image.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay d-flex flex-column align-items-end justify-content-between">
-                        <div class="circle__top__card">
-                            <p>Demo pris</p>
-                        </div>
-                        <button type="button" class="btn btn-dark btn-sm text-uppercase align-self-start">hb4
-                            taglejlighed <span class="arrow"></span></button>
-                    </div>
-                </div>
-                <div class="card__footer">
-                    <div class="price">
-                        <span class="price-active">16.495 DKK</span> <span class="price-inactive">21.595KR</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-4">
-                <div class="card card-big text-white">
-                    <img src="./images/image.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay d-flex flex-column align-items-end justify-content-between">
+                    <div class="card-img-overlay align-items-end justify-content-between">
                         <div class="circle__top__card">
                             <p>NYHED</p>
                         </div>
@@ -245,8 +242,10 @@
                     </div>
                 </div>
             </div>
+            <button class="btn btn-outlined-dark col-8 col-lg-2 offset-2 offset-lg-5 custom-btn">Se all tilbud</button>
         </div>
-        <button class="btn imp btn-outlined-dark text-uppercase btn-refresh">Se all tilbud</button>
+
+
     </section>
     <section class="personGroup d-flex flex-column align-items-center">
         <div class="personGroup__group">

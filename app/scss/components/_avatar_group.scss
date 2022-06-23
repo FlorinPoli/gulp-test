@@ -38,11 +38,9 @@
     .personGroup{
         height: rem(550);
         &__avatarGroup {
-            display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: flex-end;
-            max-width: 400px;
         }
     }
 }

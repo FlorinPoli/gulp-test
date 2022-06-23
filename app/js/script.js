@@ -1,6 +1,14 @@
 
-const navToggler = () => {
-  var nav = document.getElementById("navToggler");
+
+
+
+
+
+
+
+
+const togglerNav = () => {
+  var nav = document.getElementById("togglerNav");
   if (nav.className === "nav") {
     nav.className += " responsive"
     nav.style.right = "-5px";
@@ -30,7 +38,9 @@ const activeLink = () => {
   }
 }
 
-window.onload = function() {
-  activeLink();
-};
+// window.onload = function() {
+//   activeLink();
+// };
+
+
 

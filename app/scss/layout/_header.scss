@@ -1,60 +1,79 @@
-@mixin header($bgu-color: grey, $link-color: black, $height: rem(380),$margin-top: rem(115)) {
+@mixin header($bgu-color: grey, $link-color: black, $height: rem(380), $margin-top: rem(115)) {
   background-color: $bgu-color;
   min-height: $height;
+
   svg {
     fill: $link-color;
   }
+
   .vr {
     color: $link-color;
   }
 
   .bottomOne {
-    a,li{
-      color: $link-color;
-    }
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-
+    a,
+    li {
+      color: $link-color;
+    }
     &__logo {
       width: rem(180);
     }
+
     &__span {
-      color: $link-color !important;
-      margin-top:$margin-top;
+      color: $link-color  !important;
+      margin-top: $margin-top;
       font-size: 26px;
     }
+
     &__huge {
       font-size: 50px;
       color: $link-color;
-      
+
     }
-    &__btnWrapper{
+
+    &__btnWrapper {
       margin-top: rem(40);
     }
-    &__burger{
+
+    &__burger {
       // is needed because __huge font size
       margin-left: -35px;
+    }
+
+    .btn {
+      padding: {
+        top: $base-padding * 15;
+        bottom: $base-padding * 15;
+        left: $base-padding * 44;
+        right: $base-padding * 44;
+      }
     }
   }
 
   .topOne {
-    a,li{
-      color: $link-color;
-    }
-    
+
+   
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    .social-head{
+    a,
+    li {
+      color: $link-color;
+    }
+    .social-head {
       display: flex;
-      
-      div:not(:first-child){
+
+      div:not(:first-child) {
         padding-left: 30px;
       }
 
     }
+
     &__call {
       top: rem(10);
       margin-right: rem(10);
@@ -71,16 +90,19 @@
   @include header;
 }
 
-.header-small-dark{
+.header-small-dark {
   @include header(#f4f4f4, black, rem(380));
 }
-.header-small-white{
+
+.header-small-white {
   @include header(#5c5648, #f4f4f4, rem(380));
 }
-.header-big-dark{
+
+.header-big-dark {
   @include header(#f4f4f4, black, rem(800), rem(180));
 }
-.header-big-white{
+
+.header-big-white {
   @include header(darkgrey, #f4f4f4, rem(800), rem(180));
 }
 
@@ -98,16 +120,20 @@
       }
     }
   }
-  .header-big-white,.header-big-dark{
-    .bottomOne{
-      &__span{
+
+  .header-big-white,
+  .header-big-dark {
+    .bottomOne {
+      &__span {
         font-size: 40px;
       }
+
       &__huge {
         font-size: 100px;
 
         margin-bottom: 0;
       }
+
       &__logo {
         width: rem(200);
       }

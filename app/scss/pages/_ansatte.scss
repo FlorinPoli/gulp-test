@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    margin-bottom: 180px;
 }
 
 .ansatteDe {
@@ -17,10 +18,3 @@
 
 
 
-@include breakpoint(lg) {
-    .ansatteGroup {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-}

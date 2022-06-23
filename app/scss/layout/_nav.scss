@@ -9,7 +9,19 @@
   height: 100vh;
   transition: 1s;
   margin-left: 30px;
-
+  svg{
+    fill: black;
+    &:hover{
+      fill: #0a58ca;
+    }
+  }
+  .dropdown-toggle:after{
+    display: none;
+    }
+    .dropdown-menu{
+      width: 100%;
+    }
+  
   &__wrapper {
     margin-top: 20px;
     width: 90%;
@@ -44,5 +56,6 @@
   &-active{
     color: #bd9e6c !important;
   }
+  
 
 }

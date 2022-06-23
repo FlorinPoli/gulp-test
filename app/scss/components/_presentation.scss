@@ -1,0 +1,36 @@
+.presentation {
+    margin-top: 60px;
+    &--title {
+        text-transform: uppercase;
+        font-size: rem(13);
+        font-weight: 700;
+    }
+    &--smallTitle {
+        margin-bottom: rem(12);
+        font-size: rem(13);
+        text-transform: capitalize;
+        color: $secondary;
+    }
+    .price{
+        font-size: rem(13);
+        color: $text-muted;
+        padding-left: 0;
+        align-items: flex-start; 
+        &-inactive{
+            margin-left: 10px;
+        }
+    }
+    .btn{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    @include breakpoint (lg) {
+        margin-top: 0;
+    }
+}
+.presentationWrapper{
+    margin-top: 90px;
+    img{
+        height: 100%;
+    }
+}

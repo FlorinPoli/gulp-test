@@ -1,9 +1,5 @@
 .wrapperForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 600px;
-    max-width: 720px;
+    margin-bottom: rem(95);
     
     .contact-input{
         margin-bottom: 15px;

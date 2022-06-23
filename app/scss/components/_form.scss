@@ -1,31 +1,24 @@
 @mixin from () {
 
+  .presentation{
+    padding-top: 60px;
+  }
   &__img {
     height: 100%;
     width: 100%;
   }
-
-  &__right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: rem(30);
-    min-height: rem(400);
-  }
-
+  
   &__title {
     @include principal-title();
   }
-
+  
   &__group {
-
     &--title {
       text-transform: uppercase;
       font-size: rem(13);
       font-weight: 700;
     }
-
+    
     &--smallTitle {
       margin-bottom: rem(12);
       font-size: rem(13);
@@ -33,54 +26,5 @@
       color: $secondary;
     }
   }
-
-}
-
-.form {
-  @include from();
-}
-
-.from-avatar {
-  @include from();
-}
-
-@include breakpoint(xs) {
- 
-  .form.form-avatar{
-    display: grid;
-    grid-template-columns: rem(470) auto;
-    .form__right{
-
-    }
-  }
-  .form {
-    display: grid;
-    grid-template-columns: rem(720) auto;
-    &__right {
-      margin: {
-        top: 0;
-      }
-      padding: {
-        left: rem(30);
-      
-      }
-    }
-  }
-}
-
-@include breakpoint(lg) {
- 
-  // .form {
-  //   &__img {
-  //     min-width: rem(720);
-  //   }
-  // }
-  .form.form-avatar{
-    &__img{
-
-    }
-  }
-
-
-
+  
 }

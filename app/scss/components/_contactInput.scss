@@ -1,6 +1,7 @@
 
 .contact-input {
     min-height: rem(55);
+    width: 100%;
     padding: {
         left: rem(20);
         top: rem(10);
@@ -13,8 +14,3 @@
     }
 }
 
-@include breakpoint(xs){ 
-    .contact-input {
-        width: rem(580);
-    }
-}
