@@ -1,9 +1,6 @@
 @mixin header($bgu-color: grey, $link-color: black, $height: rem(380),$margin-top: rem(115)) {
   background-color: $bgu-color;
   min-height: $height;
-  
-
-
   svg {
     fill: $link-color;
   }
@@ -12,11 +9,11 @@
   }
 
   .bottomOne {
-    a{
+    a,li{
       color: $link-color;
     }
     display: flex;
-    justify-content: none;
+    justify-content: space-between;
     text-transform: uppercase;
 
     &__logo {
@@ -87,11 +84,8 @@
   @include header(darkgrey, #f4f4f4, rem(800), rem(180));
 }
 
-@include breakpoint(s) {
+@include breakpoint(md) {
   .header {
-    .bottomOne{
-      justify-content: space-between ;
-    }
     .topOne {
       flex-direction: row;
       justify-content: end;

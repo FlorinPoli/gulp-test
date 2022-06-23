@@ -1,14 +1,15 @@
 .wrapperForm{
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 600px;
+    max-width: 720px;
+    
     .contact-input{
-        width: auto;
         margin-bottom: 15px;
     }
+    .btn{
+      width: 100%;
+    }
   
-}
-.form{
-    
-
 }

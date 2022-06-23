@@ -1,19 +1,15 @@
 @mixin contact (){
-  display: flex;
-  flex-direction: column;
   min-height: rem(200);
   background-color: #a39064;
   color: white;
-  align-items: center;
-  justify-content: start;
-  text-align: center;
-
+  padding-bottom: rem(60);
   p {
-    font-size: rem(40);
-    margin: {
-      bottom: rem(60);
+    padding: {
       top: rem(60);
-    }
+      bottom: rem(60);
+    };
+    font-size: rem(18);
+  
   }
   .btn {
     border: 1px solid white;
@@ -21,20 +17,32 @@
     min-width: rem(190);
     font-size: rem(13);
     font-weight: 600;
+
   }
+  .col{
+     //flex: 0 0 0%;
+     display: flex;
+     justify-content: center;
+     
+   }
+
 }
 
 .contact {
  @include contact();
 }
 
-@include breakpoint (s) {
+@include breakpoint (md) {
+ 
  .contact{
-  flex-direction: row;
-  padding-bottom: 0;
   text-align: start;
+ 
   p {
-    margin-right: rem(30);
+    padding: {
+      top: rem(60);
+      bottom: rem(60);
+    };
+     font-size: rem(30);
   }
  }
 }

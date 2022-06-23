@@ -22,13 +22,13 @@ body {
   }
 }
 
-section,
-footer, header {
-  padding: {
-    right: 5vw;
-    left: 5vw;
-  }
-}
+// section,
+// footer, header {
+//   padding: {
+//     right: 5vw;
+//     left: 5vw;
+//   }
+// }
 
 .content{
   margin-bottom: 90px;
@@ -40,14 +40,14 @@ a {
   width: 100vw;
 }
 
-@include breakpoint(xs) {
+// @include breakpoint(xs) {
 
-  section,
-  footer, header {
-    padding: {
-      right: $padding-x-custom;
-      left: $padding-x-custom ;
-    }
-  }
+//   section,
+//   footer, header {
+//     padding: {
+//       right: $padding-x-custom;
+//       left: $padding-x-custom ;
+//     }
+//   }
 
-}
+// }

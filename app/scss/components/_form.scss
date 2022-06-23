@@ -1,9 +1,4 @@
 @mixin from () {
-  display: block;
-  margin: {
-    top: rem(90);
-    bottom: rem(80);
-  };
 
   &__img {
     height: 100%;
@@ -16,7 +11,6 @@
     justify-content: space-between;
     width: 100%;
     margin-top: rem(30);
-    
     min-height: rem(400);
   }
 
@@ -50,13 +44,13 @@
   @include from();
 }
 
-@include breakpoint(s) {
+@include breakpoint(xs) {
  
   .form.form-avatar{
     display: grid;
     grid-template-columns: rem(470) auto;
     .form__right{
-      width: 100%;
+
     }
   }
   .form {
@@ -64,14 +58,17 @@
     grid-template-columns: rem(720) auto;
     &__right {
       margin: {
-        left: rem(30);
         top: 0;
+      }
+      padding: {
+        left: rem(30);
+      
       }
     }
   }
 }
 
-@include breakpoint(xxl) {
+@include breakpoint(lg) {
  
   // .form {
   //   &__img {

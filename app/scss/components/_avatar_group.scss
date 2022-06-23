@@ -34,7 +34,7 @@
     }
 }
 
-@include breakpoint(s) {
+@include breakpoint(xs) {
     .personGroup{
         height: rem(550);
         &__avatarGroup {
