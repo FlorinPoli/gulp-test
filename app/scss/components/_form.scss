@@ -12,6 +12,9 @@
     width: 100%;
     margin-top: rem(30);
     min-height: rem(400);
+    .program{
+      width: 25%;
+    }
   }
 
   &__title {
@@ -83,4 +86,10 @@
 
 
 
+}
+
+
+.img-h{
+
+  height: 100%;
 }

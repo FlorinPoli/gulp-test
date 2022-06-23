@@ -1,53 +1,67 @@
-@mixin contact (){
+@mixin contact () {
   min-height: rem(200);
   background-color: #a39064;
   color: white;
   padding-bottom: rem(60);
+
   p {
     padding: {
       top: rem(60);
       bottom: rem(60);
-    };
+    }
+
+    
     font-size: rem(18);
-  
+
   }
+
   .btn {
     border: 1px solid white;
     color: white;
     min-width: rem(190);
     font-size: rem(13);
     font-weight: 600;
+    padding: {
+      top: $base-padding * 15;
+      bottom: $base-padding * 15;
+      left: $base-padding * 44;
+      right: $base-padding * 44;
+    }
 
   }
-  .col{
-     //flex: 0 0 0%;
-     display: flex;
-     justify-content: center;
-     
-   }
+
+  .col {
+    //flex: 0 0 0%;
+    display: flex;
+    justify-content: center;
+
+  }
 
 }
 
 .contact {
- @include contact();
+  @include contact();
 }
 
 @include breakpoint (md) {
- 
- .contact{
-  text-align: start;
- 
-  p {
-    padding: {
-      top: rem(60);
-      bottom: rem(60);
-    };
-     font-size: rem(30);
+
+  .contact {
+    text-align: start;
+
+    p {
+      padding: {
+        top: rem(60);
+        bottom: rem(60);
+      }
+
+      ;
+      font-size: rem(30);
+    }
   }
- }
 }
-@include breakpoint(xl){
- .contact{
-  height: rem(200);
- }
+
+@include breakpoint(xl) {
+  .contact {
+    height: rem(200);
+  }
 }

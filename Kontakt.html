@@ -60,7 +60,7 @@
                     <img class="bottomOne__logo float-start img-fluid" src="./images/logo-frontend-light.svg" />
                     <span class="bottomOne__span text-uppercase text-muted">Forside / kontakt</span>
                 </div>
-                <div onclick="navToggler()" class="mt-3 pt-2">
+                <div onclick="togglerNav()" class="mt-3 pt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" fill="currentColor" class="bi bi-list"
                         viewBox="0 0 10 16">
                         <path fill-rule="evenodd"
@@ -72,9 +72,9 @@
         </div>
     </div>
 
-    <div id="navToggler" class="nav">
+    <div id="togglerNav" class="nav">
         <div class="nav__wrapper">
-            <div onclick="navToggler()">X</div>
+            <div onclick="togglerNav()">X</div>
             <img class="nav__wrapper--img" src="./images/logo-frontend-dark.svg" />
             <ul id="link-container" class="nav__list">
                 <li>
@@ -193,12 +193,19 @@
         </div>
     </section>
     <section class="container">
-        <from class="wrapper-contact-form">
-            <div class="wrapper-contact-form__custom-display">
+        <from class="row g-5">
+            <div class="col-6">
                 <input class="contact-input" placeholder="Navn ..." />
+            </div>
+            <div class="col-6">
                 <input class="contact-input" placeholder="E-mail ..." />
             </div>
-            <textarea class="contact-input" placeholder="Meddelelse ..."></textarea>
+            <div class="col">
+                <textarea class="contact-input" placeholder="Meddelelse ..."></textarea>
+
+            </div>
+                
+                
             <button class="btn btn-dark">Send</button>
         </from>
     </section>

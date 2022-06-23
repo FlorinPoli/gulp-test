@@ -5,25 +5,31 @@
     display: inline-block;
     text-align: center;
     border: 2px;
-    padding: {
-        top: $base-padding * 15;
-        bottom: $base-padding * 15;
-        left: $base-padding * 44;
-        right: $base-padding * 44;
-    }
+    // padding: {
+    //     top: $base-padding * 15;
+    //     bottom: $base-padding * 15;
+    //     left: $base-padding * 44;
+    //     right: $base-padding * 44;
+    // }
     // background-color: #fff;
     background: $bg;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    min-width: rem(20);
     min-height: rem(20);
     span{
         margin: {
             top: $base-padding *2;
             bottom: $base-padding *2;
-          
         }
+    }
+    @include breakpoint(lg){
+              min-width: rem(20);
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        min-width: rem(140);
+        min-height: rem(55);
     }
 }
 
@@ -54,12 +60,13 @@ $val in $colors {
     }
 }
 
-@include breakpoint(xs) {
+@include breakpoint(lg) {
     .btn {
-        font-size: 16px;
-        font-weight: 600;
-        text-transform: uppercase;
-        min-width: rem(140);
-        min-height: rem(55);
+        // min-width: rem(20);
+        // font-size: 16px;
+        // font-weight: 600;
+        // text-transform: uppercase;
+        // min-width: rem(140);
+        // min-height: rem(55);
     }
 }
