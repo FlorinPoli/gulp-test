@@ -14,6 +14,7 @@
       align-items: $ai;
       flex-direction: column;
       justify-content: $js-content;
+      min-width: $min-width;
     }
   }
   &__footer {
