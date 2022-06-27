@@ -44,7 +44,6 @@
   @include card(rem(340), rem(270));
   position: relative;
   display: flex;
-  margin-top: 42px;
   // flex: 1 0 21%;
   &:after {
     content: "";
@@ -112,15 +111,12 @@
 }
 
 .card-small {
-  @include card(rem(200), rem);
+  @include card(rem(200));
 
   .card-img-overlay {
     display: none;
-    margin-left: 11px;
-    margin-right: 11px;
    
   }
-
   .circle__card {
     opacity: 1;
   }
@@ -131,7 +127,6 @@
     }
 
     .card-img-overlay {
-     
       display: flex;
       justify-content: center;
       align-items: center;
@@ -140,9 +135,28 @@
     }
   }
 }
+.card-slider-big {
+  @include card(rem(470));
 
-
-
+  .card-img-overlay {
+    display: none;
+  }
+  .circle__card {
+    opacity: 1;
+  }
+  &:hover {
+    .circle__card {
+      opacity: 1;
+    }
+    .card-img-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: rgba(191, 191, 191, 0.5);
+    }
+  }
+}
 
 .card-footer-custom {
   padding-top: 30px;
@@ -182,11 +196,10 @@
 }
 
 .card-slider{
-  @include card(rem(200));
+  @include card(rem(470));
   align-items: center;
   text-align: center;
-
-user-select: none; /* Standard */
+  user-select: none; /* Standard */
 
   h1{
     margin-top: 30px;

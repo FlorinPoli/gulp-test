@@ -10,10 +10,7 @@
   transition: 1s;
   margin-left: 30px;
   svg{
-    fill: black;
-    &:hover{
-      fill: #0a58ca;
-    }
+    fill: black; 
   }
   .dropdown-toggle:after{
     display: none;
@@ -52,10 +49,14 @@
     text-transform: uppercase;
     justify-content: start;
     border-bottom: 1px solid darkgray;
+      &:hover{
+        svg{
+        fill: #0a58ca;
+      }
+    }
+   
   }
   &-active{
     color: #bd9e6c !important;
   }
-  
-
 }
